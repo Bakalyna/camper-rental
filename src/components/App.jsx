@@ -1,16 +1,22 @@
-export const App = () => {
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from '..components/Home';
+import Catalog from '../components/Catalog';
+import Favorites from '../components/Favorites';
+import Header from '../components/Header';
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/catalog" component={Catalog} />
+        <Route path="/favorites" component={Favorites} />
+        <Route path="*" component={Home} />
+      </Switch>
+    </Router>
   );
-};
+}
+
+export default App;
