@@ -1,5 +1,4 @@
-import React from 'react';
-import './Modal.css'; // Додаємо стилі для модального вікна
+import './Modal.module.css';
 
 const Modal = ({ advert, onClose }) => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import AdvertCard from './AdvertCard';
+import AdvertCard from '../AdvertCard/AdvertCard';
 
 const Catalog = () => {
   const [adverts, setAdverts] = useState([]);
